@@ -47,7 +47,8 @@ public class J16_Hilos4_Sincronizacion {
 		try {
 			// join()  hará que finalize el hilo2 en su totalidad(osea que muera) para que se ejecute
 			// las lineas del hilo del main(osea lo que esta debajo) recordan que el main es otro hilo que
-			// se esta ejecutando
+			// se esta ejecutando, pero esto no es tan buena practica, porque el hilo de main estara 'bloqueado' hasta que
+			// se termien las tareas, pero funciona.
 			hilo2.join();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
