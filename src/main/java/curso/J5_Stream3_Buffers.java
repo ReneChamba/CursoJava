@@ -19,11 +19,11 @@ public class J5_Stream3_Buffers {
 	 * cuando escribiremos/leeremos pocas lineas, no es tan necesario, pero de todas formas, si se puede.
 	 * 
 	 * - Como trabaja el buffer, de la siguente manera:
-	 * Cuando deseamos leer un archivo, lo que hace es que los datos del archivo se vuelva enteramente 
+	 * Cuando deseamos leer un archivo, lo que hace es que los datos del archivo se vuelca enteramente 
 	 * al buffer y se almacena integramente, entonces es nuestro programa java quien interactura con el buffer y no 
 	 * con el archivo directamente.
 	 * 
-	 *   Lo mismo sucede cuando deseamos escribir, primero los datos a escribir de vuelcan a buffer y luego será
+	 *   Lo mismo sucede cuando deseamos escribir, primero los datos a escribir de vuelcan a buffer y luego serï¿½
 	 *   el buffer quien escribira en el archivo.
 	 *   
 	 *   Clase utilizadas:
@@ -59,7 +59,8 @@ class UtilizarBUffer{
 		
 		FileReader fileReader = new FileReader("R:\\RONNY\\escribir.txt");
 		
-		// Crear ese memoria intermedia donde se alamcenara todo la informacion del archivo a leerr
+		// Crear ese memoria intermedia donde se alamcenara todo la 
+		// informacion del archivo a leerr
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		
 		
@@ -87,7 +88,9 @@ class UtilizarBUffer{
 	public static void bufferedEscribir()  throws Exception{
 		
 		
-		
+		// Escribir en un archivo
+		// Se puede pasar un segundo paramtro true, para que escriba en un archivo
+		// existente, si no hay, lo crea (ruta, boolean)
 		FileWriter fileReader = new FileWriter("R:\\RONNY\\escribiendoNuevo.txt");
 		
 		// Crear ese memoria intermedia donde se almacenara los datos a escribir
@@ -95,7 +98,7 @@ class UtilizarBUffer{
 		
 		
 		
-		String textoEscribir="ESto es información escrita desde java  utilizando la clase BufferedWriter ";
+		String textoEscribir="ESto es informaciï¿½n escrita desde java  utilizando la clase BufferedWriter ";
 		
 		 bufferedWriter.write(textoEscribir);
 		
